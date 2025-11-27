@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block content %}
+<form action="" method="post" class="formulario">
+    <fieldset>
+       <legend>{% block title%}Registrar usuario{% endblock %}</legend>
+       <div class="campo">
+         <label for="username">registrar usuario</label>
+         <input type="text" id="username" name="username" required minlength="4" maxlength="20">
+       </div> 
+       <div class="campo">
+            <label for="password">contraseña</label>
+            <input type="password" id="password" name="password" required minlength="6" maxlength="22">
+       </div>
+       <div class="registrar">
+            <input class="btn" type="submit" value="registrar usuario">
+       </div>
+    </fieldset>
+</form>
+{% endblock %} 

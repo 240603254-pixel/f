@@ -1,0 +1,487 @@
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1REM es 10 px*/
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+      font-family: "Raleway", sans-serif;
+      font-size: 1.6rem;
+      line-height: 2;
+}
+
+/**Globales*/
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h1, h2, h3{
+    font-family: "Playfair Display", serif;
+    margin: 0 0 5rem 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%; /*la imagen toma el tamano del contenedor  conten 300 imagen 600 */
+    display: block;
+}
+
+/*UTILIDADES*/
+.max-width{
+    max-width: 30rem;
+    height: 5rem;
+}
+
+.btn{
+    background: hsl(207, 4%, 47%);
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background .3s ease-out;
+    border-radius: 5px;
+}
+.btn:hover{
+    background: #373a30;
+}
+
+
+/* estilos de las tablas*/
+/*Navegacion*/
+.nav-principal{
+    
+    padding: 2rem 0;
+    display: flex;
+    flex-direction:row; /*cuatro posibles valores*/
+    /*en direccion row justify-content es para alinear horizontalmente y align-items es vertical*/
+    justify-content: space-between; /*tiene varios valores*/
+    align-items: center; /*tiene varios valores*/
+    background-color: #000;
+}
+.nav-principal a{
+    color: #fff;
+    font-size: 2.5rem;
+}
+.nav-principal a:hover{
+    color: #ffffff87;
+}
+.nav-principal .nav-link:nth-child(1){
+    margin-right: 3rem;
+}
+
+
+/*Index*/
+.contendio{
+    text-align: center;
+}
+.contendio h1{
+    margin-bottom: 0;
+}
+.contendio .desc{
+    margin-top: 0;
+}
+.contendio .botones{
+    display: flex;
+    justify-content: center;
+}
+.contendio .btn{
+    background: hsl(207, 4%, 47%);
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background .3s ease-out;
+    border-radius: 5px;
+}
+.contendio .btn:nth-child(1){
+    margin-right: 3rem;
+}
+.contendio .btn:hover{
+    background: #373a30;
+}
+
+
+/*Registrar*/
+.formulario{
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.formulario fieldset{
+    border: 3px solid black;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+.formulario legend{
+    background: #434b4f;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo label{
+    flex-basis: 16rem;
+}
+.registar{
+  display: flex;
+  justify-content: center;
+}
+
+/*Mensaje de error cuando ya se encuentra registrado un usuario*/
+.container-error{
+    background-color: #f5bbbb;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.container-error p{
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    color: #cf2c2c;
+}
+
+/*TAREAS*/
+.nav-tarea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.nav-tarea h1{
+    margin-bottom: 0;
+}
+
+
+
+/* === Contenedor principal === */
+.task-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* === Título === */
+.task-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+}
+
+/* === Formulario === */
+.task-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+/* === Separador === */
+.form-divider {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* === Acciones === */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* === Botones === */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background: #0078d7;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #005fa3;
+}
+
+.btn-secondary {
+  background: #eee;
+  color: #333;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: #ddd;
+}
+
+
+/*segunda parte*/
+/* === Navegación === */
+.task-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.task-heading {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* === Separador === */
+.task-divider {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* === Tabla === */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.table-head {
+  background: #f0f0f0;
+}
+
+.table-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-row-head {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table-cell {
+  padding: 0.8rem;
+  text-align: left;
+}
+
+/* === Botones === */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background: #0078d7;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #005fa3;
+}
+
+.btn-secondary {
+  background: #eee;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #ddd;
+}
+
+.btn-danger {
+  background: #d9534f;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #b52b27;
+}
+
+/* === Extra === */
+.max-width {
+  max-width: 120px;
+  text-align: center;
+}
+/* === Título principal de la lista de tareas === */
+.task-heading {
+  font-size: 2rem;          /* más grande que los subtítulos */
+  font-weight: 700;         /* negrita para destacar */
+  color: #222;              /* tono oscuro para contraste */
+  margin: 0;                /* elimina márgenes por defecto */
+  text-transform: uppercase;/* opcional: todo en mayúsculas */
+  letter-spacing: 1px;      /* separación ligera entre letras */
+}
+
+/*tercera parte*/
+/* === Contenedor principal === */
+.edit-task-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* === Título === */
+.edit-task-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+}
+
+/* === Formulario === */
+.edit-task-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+/* === Checkbox === */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* === Separador === */
+.form-divider {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* === Acciones === */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* === Botones === */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background: #0078d7;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #005fa3;
+}
+
+.btn-secondary {
+  background: #eee;
+  color: #333;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: #ddd;
+}
+/* === Encabezado "Editar Tarea" === */
+.edit-task-title {
+  font-size: 1.8rem;       /* más grande que subtítulos */
+  font-weight: 700;        /* negrita para marcar jerarquía */
+  color: #0078d7;          /* azul principal para diferenciarlo */
+  text-align: center;      /* centrado en la tarjeta */
+  margin-bottom: 1.5rem;   /* espacio con el formulario */
+  text-transform: uppercase; /* opcional: todo en mayúsculas */
+  letter-spacing: 1px;     /* separación ligera entre letras */
+}
